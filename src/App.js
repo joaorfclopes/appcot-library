@@ -4,6 +4,7 @@ import { Tab, Nav, Col, Row } from "react-bootstrap";
 /* Components */
 import Navbar from "./components/Navbar";
 import VideoBackground from "./components/VideoBackground";
+import Button from "./components/Button";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -32,6 +33,9 @@ function App() {
               <Nav.Item>
                 <Nav.Link eventKey="1">Video Background</Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="2">Button</Nav.Link>
+              </Nav.Item>
             </Nav>
           </Col>
           <Col sm={10}>
@@ -51,6 +55,16 @@ function App() {
                   text1={videoBackgroundTexts.text1}
                   text2={videoBackgroundTexts.text2}
                 />
+              </Tab.Pane>
+              <Tab.Pane eventKey="2">
+                <Button text="Primary" variant="primary" />
+                <Button text="Secondary" variant="secondary" />
+                <Button text="Success" variant="success" />
+                <Button text="Warning" variant="warning" />
+                <Button text="Danger" variant="danger" />
+                <Button text="Info" variant="info" />
+                <Button text="Light" variant="light" />
+                <Button text="Dark" variant="dark" />
               </Tab.Pane>
             </Tab.Content>
           </Col>
