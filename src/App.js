@@ -71,7 +71,8 @@ function App() {
                 <Button text="Dark" variant="dark" />
               </Tab.Pane>
               <Tab.Pane eventKey="3">
-                <Title text="Lorem Ipsum" />
+                <Title text="Lorem Ipsum" theme="light" />
+                <Title text="Lorem Ipsum" theme="dark" />
               </Tab.Pane>
             </Tab.Content>
           </Col>
