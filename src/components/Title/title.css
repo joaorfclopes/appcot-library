@@ -1,0 +1,19 @@
+.title {
+    text-decoration-line: overline;
+    text-decoration-color: #F07F00;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40px;
+}
+
+@media only screen and (min-width: 800px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .title {
+        font-size: 4vh;
+    }
+}

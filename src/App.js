@@ -5,6 +5,7 @@ import { Tab, Nav, Col, Row } from "react-bootstrap";
 import Navbar from "./components/Navbar";
 import VideoBackground from "./components/VideoBackground";
 import Button from "./components/Button";
+import Title from "./components/Title";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -36,6 +37,9 @@ function App() {
               <Nav.Item>
                 <Nav.Link eventKey="2">Button</Nav.Link>
               </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="3">Title</Nav.Link>
+              </Nav.Item>
             </Nav>
           </Col>
           <Col sm={10}>
@@ -65,6 +69,9 @@ function App() {
                 <Button text="Info" variant="info" />
                 <Button text="Light" variant="light" />
                 <Button text="Dark" variant="dark" />
+              </Tab.Pane>
+              <Tab.Pane eventKey="3">
+                <Title text="Lorem Ipsum" />
               </Tab.Pane>
             </Tab.Content>
           </Col>
