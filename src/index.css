@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Poppins Regular";
+    src: url("./font/Poppins/Poppins-Regular.ttf")
+}
+
+html {
+    font-family: Poppins Regular, sans-serif;
+    margin: 20px;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #F07F00;
+}
+
+.nav-link {
+    outline: none;
+}
+
+.active {
+    background-color: #F07F00 !important;
+}
+
+.tab-pane {
+    background-color: transparent !important;
+}

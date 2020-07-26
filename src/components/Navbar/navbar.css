@@ -1,0 +1,131 @@
+.navbarContainer {
+    position: sticky;
+    width: 100%;
+    height: 70px;
+    background: whitesmoke;
+    z-index: 999;
+    transition: 250ms ease-in-out;
+}
+
+.logoContainer {
+    margin: 10px 0px 20px 20px;
+    display: inline-block;
+    transition: 250ms ease-in-out;
+}
+
+.logo {
+    width: 50px;
+    margin-left: 20px;
+    transition: 250ms ease-in-out;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.lettering {
+    width: 110px;
+    padding: 10px;
+    transition: 250ms ease-in-out;
+}
+
+.optionsContainer {
+    float: right;
+    margin: 20px 40px 20px 0px;
+    transition: 250ms ease-in-out;
+}
+
+.option {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #F07F00, #F07F00 50%, black 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 300ms ease;
+}
+
+.option:hover,
+.option:active {
+    cursor: pointer;
+    background-position: 0 100%;
+}
+
+@media only screen and (min-width: 800px) {
+    .hamburger {
+        display: none;
+    }
+
+    .closeMenu {
+        display: none;
+    }
+
+    .options {
+        display: block;
+    }
+
+    .option {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .closeMenu {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .logo {
+        margin-left: 10px;
+    }
+
+    .hamburger {
+        width: 30px;
+        display: block;
+    }
+
+    .closeMenu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 15px;
+        margin-right: 38px;
+        font-size: 25px;
+    }
+
+    .options {
+        display: none;
+    }
+
+    .option {
+        display: block;
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .openOptions {
+        position: absolute;
+        background-color: whitesmoke;
+        display: table;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    .menuOptions {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .closeMenu {
+        display: block;
+    }
+}
