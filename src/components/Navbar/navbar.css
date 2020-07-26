@@ -4,19 +4,16 @@
     height: 70px;
     background: whitesmoke;
     z-index: 999;
-    transition: 250ms ease-in-out;
 }
 
 .logoContainer {
     margin: 10px 0px 20px 20px;
     display: inline-block;
-    transition: 250ms ease-in-out;
 }
 
 .logo {
     width: 50px;
     margin-left: 20px;
-    transition: 250ms ease-in-out;
 }
 
 .logo:hover {
@@ -26,13 +23,11 @@
 .lettering {
     width: 110px;
     padding: 10px;
-    transition: 250ms ease-in-out;
 }
 
 .optionsContainer {
     float: right;
     margin: 20px 40px 20px 0px;
-    transition: 250ms ease-in-out;
 }
 
 .option {
@@ -90,11 +85,9 @@
 
     .closeMenu {
         position: absolute;
-        right: 0;
-        top: 0;
-        margin-top: 15px;
-        margin-right: 38px;
-        font-size: 25px;
+        right: 35px;
+        top: -5px;
+        font-size: 50px;
     }
 
     .options {

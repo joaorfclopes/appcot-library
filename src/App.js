@@ -3,14 +3,22 @@ import { Tab, Nav, Col, Row } from "react-bootstrap";
 
 /* Components */
 import Navbar from "./components/Navbar";
+import VideoBackground from "./components/VideoBackground";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
 import lettering from "./assets/svg/lettering.svg";
 import hamburger from "./assets/svg/hamburger.svg";
+import gif from "./assets/gif/video.gif";
+import mp4 from "./assets/mp4/video.mp4";
 
 function App() {
   const navbarOptions = ["Lorem", "Ipsum", "Dolor", "Sit", "Amet"];
+
+  const videoBackgroundTexts = {
+    text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    text2: "Sed non congue turpis, sed semper justo",
+  };
 
   return (
     <div className="App">
@@ -20,6 +28,9 @@ function App() {
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
                 <Nav.Link eventKey="0">Navbar</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="1">Video Background</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -31,6 +42,14 @@ function App() {
                   lettering={lettering}
                   hamburger={hamburger}
                   options={navbarOptions}
+                />
+              </Tab.Pane>
+              <Tab.Pane eventKey="1">
+                <VideoBackground
+                  gif={gif}
+                  mp4={mp4}
+                  text1={videoBackgroundTexts.text1}
+                  text2={videoBackgroundTexts.text2}
                 />
               </Tab.Pane>
             </Tab.Content>

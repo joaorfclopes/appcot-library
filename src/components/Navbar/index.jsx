@@ -37,7 +37,7 @@ export default class Navbar extends React.Component {
           />
           <div className="options">
             <p className="closeMenu" onClick={this.closeMenu}>
-              &#10006;
+              &times;
             </p>
             <div className="menuOptions">
               {options.map((option) => (
