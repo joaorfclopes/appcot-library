@@ -44,7 +44,7 @@ export default class Navbar extends React.Component {
             </p>
             <div className="menu-options">
               {options.map((option) => (
-                <Style>
+                <Style key={option}>
                   {`
                     .option {
                       position: relative;

@@ -1,0 +1,11 @@
+.fixed-background {
+    min-height: 100vh;
+    background: url("../../assets/jpg/background.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-attachment: fixed;
+    color: whitesmoke;
+    padding: 40px;
+}
