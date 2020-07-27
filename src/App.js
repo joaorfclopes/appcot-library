@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab, Nav, Col, Row } from "react-bootstrap";
+import { Tab, Nav, Col, Row, CardDeck } from "react-bootstrap";
 
 /* Components */
 import Navbar from "./components/Navbar";
@@ -102,6 +102,11 @@ function App() {
               </Tab.Pane>
               <Tab.Pane eventKey="5">
                 <Card bg={img1} title={words} text={phrase} />
+                <CardDeck style={{ marginTop: "20px" }}>
+                  <Card bg={img1} title={words} text={phrase} />
+                  <Card bg={img1} title={words} text={phrase} />
+                  <Card bg={img1} title={words} text={phrase} />
+                </CardDeck>
               </Tab.Pane>
               <Tab.Pane eventKey="6">
                 <VideoBackground
