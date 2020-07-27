@@ -4,21 +4,21 @@ import "./navbar.css";
 
 export default class Navbar extends React.Component {
   openMenu = () => {
-    $(".closeMenu").addClass("openCloseMenu");
-    $(".options").addClass("openOptions");
+    $(".close-menu").addClass("open-close-menu");
+    $(".options").addClass("open-options");
   };
 
   closeMenu = () => {
-    $(".closeMenu").removeClass("openCloseMenu");
-    $(".options").removeClass("openOptions");
+    $(".close-menu").removeClass("open-close-menu");
+    $(".options").removeClass("open-options");
   };
 
   render = () => {
     const options = this.props.options;
 
     return (
-      <div className="navbarContainer">
-        <div className="logoContainer">
+      <div className="navbar-container">
+        <div className="logo-container">
           <span>
             <img className="logo" src={this.props.logo} alt="logo" />
             <img
@@ -28,7 +28,7 @@ export default class Navbar extends React.Component {
             />
           </span>
         </div>
-        <div className="optionsContainer">
+        <div className="options-container">
           <img
             className="hamburger"
             src={this.props.hamburger}
@@ -36,10 +36,10 @@ export default class Navbar extends React.Component {
             onClick={this.openMenu}
           />
           <div className="options">
-            <p className="closeMenu" onClick={this.closeMenu}>
+            <p className="close-menu" onClick={this.closeMenu}>
               &times;
             </p>
-            <div className="menuOptions">
+            <div className="menu-options">
               {options.map((option) => (
                 <span className="option" key={option}>
                   {option}

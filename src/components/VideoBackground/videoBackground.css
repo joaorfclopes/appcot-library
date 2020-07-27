@@ -1,10 +1,10 @@
-.videoBackground {
+.video-background {
     position: relative;
     top: 0;
     height: 100vh;
 }
 
-.videoContainer {
+.video-container {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -24,7 +24,7 @@
     transform: translate(-50%, -50%)
 }
 
-.frontText {
+.front-text {
     font-weight: bold;
     color: whitesmoke;
     text-align: center;
@@ -40,19 +40,19 @@
     z-index: 100;
 }
 
-.videoText {
+.video-text {
     display: table-cell;
     vertical-align: middle;
 }
 
 @media only screen and (min-width: 800px) {
-    .videoText {
+    .video-text {
         font-size: 50px;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .videoText {
+    .video-text {
         font-size: 4vh;
     }
 }

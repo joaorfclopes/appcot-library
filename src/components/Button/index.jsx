@@ -5,7 +5,7 @@ import "./button.css";
 export default class Button extends React.Component {
   render = () => {
     return (
-      <BootstrapButton variant={`outline-${this.props.variant}`}>
+      <BootstrapButton className="button" variant={`outline-${this.props.variant}`}>
         {this.props.text}
       </BootstrapButton>
     );

@@ -6,8 +6,8 @@ export default class VideoBackground extends React.Component {
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
     return (
-      <div className="videoBackground">
-        <div className="videoContainer">
+      <div className="video-background">
+        <div className="video-container">
           {iOS ? (
             <React.Fragment>
               <img className="video" src={this.props.gif} alt="video" />
@@ -19,8 +19,8 @@ export default class VideoBackground extends React.Component {
               </video>
             </React.Fragment>
           )}
-          <div className="frontText">
-            <div className="videoText">
+          <div className="front-text">
+            <div className="video-text">
               <p>{this.props.text1}</p>
               <br />
               <p>{this.props.text2}</p>

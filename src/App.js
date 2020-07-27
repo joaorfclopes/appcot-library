@@ -37,19 +37,19 @@ function App() {
                 <Nav.Link eventKey="0">Navbar</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="1">Video Background</Nav.Link>
+                <Nav.Link eventKey="1">Button</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="2">Button</Nav.Link>
+                <Nav.Link eventKey="2">Title</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="3">Title</Nav.Link>
+                <Nav.Link eventKey="3">Subtitle</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="4">Subtitle</Nav.Link>
+                <Nav.Link eventKey="4">Text</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="5">Text</Nav.Link>
+                <Nav.Link eventKey="5">Video Background</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -64,14 +64,6 @@ function App() {
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="1">
-                <VideoBackground
-                  gif={gif}
-                  mp4={mp4}
-                  text1={videoBackgroundTexts.text1}
-                  text2={videoBackgroundTexts.text2}
-                />
-              </Tab.Pane>
-              <Tab.Pane eventKey="2">
                 <Button text="Primary" variant="primary" />
                 <Button text="Secondary" variant="secondary" />
                 <Button text="Success" variant="success" />
@@ -81,17 +73,25 @@ function App() {
                 <Button text="Light" variant="light" />
                 <Button text="Dark" variant="dark" />
               </Tab.Pane>
-              <Tab.Pane eventKey="3">
+              <Tab.Pane eventKey="2">
                 <Title text="Lorem Ipsum" theme="dark" />
                 <Title text="Lorem Ipsum" theme="light" />
               </Tab.Pane>
-              <Tab.Pane eventKey="4">
+              <Tab.Pane eventKey="3">
                 <Subtitle text="Lorem Ipsum" theme="dark" />
                 <Subtitle text="Lorem Ipsum" theme="light" />
               </Tab.Pane>
-              <Tab.Pane eventKey="5">
+              <Tab.Pane eventKey="4">
                 <Text text={paragraph} theme="dark" />
                 <Text text={paragraph} theme="light" />
+              </Tab.Pane>
+              <Tab.Pane eventKey="5">
+                <VideoBackground
+                  gif={gif}
+                  mp4={mp4}
+                  text1={videoBackgroundTexts.text1}
+                  text2={videoBackgroundTexts.text2}
+                />
               </Tab.Pane>
             </Tab.Content>
           </Col>
