@@ -21,11 +21,13 @@ export default class Navbar extends React.Component {
         <div className="logo-container">
           <span>
             <img className="logo" src={this.props.logo} alt="logo" />
-            <img
-              className="lettering"
-              src={this.props.lettering}
-              alt="lettering"
-            />
+            {!this.props.noLettering && (
+              <img
+                className="lettering"
+                src={this.props.lettering}
+                alt="lettering"
+              />
+            )}
           </span>
         </div>
         <div className="options-container">

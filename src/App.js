@@ -3,11 +3,12 @@ import { Tab, Nav, Col, Row } from "react-bootstrap";
 
 /* Components */
 import Navbar from "./components/Navbar";
-import VideoBackground from "./components/VideoBackground";
 import Button from "./components/Button";
 import Title from "./components/Title";
 import Subtitle from "./components/Subtitle";
 import Text from "./components/Text";
+import Card from "./components/Card";
+import VideoBackground from "./components/VideoBackground";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -15,6 +16,7 @@ import lettering from "./assets/svg/lettering.svg";
 import hamburger from "./assets/svg/hamburger.svg";
 import gif from "./assets/gif/video.gif";
 import mp4 from "./assets/mp4/video.mp4";
+import img1 from "./assets/jpg/img1.jpg";
 
 function App() {
   const navbarOptions = ["Lorem", "Ipsum", "Dolor", "Sit", "Amet"];
@@ -23,6 +25,10 @@ function App() {
     text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     text2: "Sed non congue turpis, sed semper justo",
   };
+
+  const words = "Lorem Ipsum";
+
+  const phrase = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
   const paragraph =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non congue turpis, sed semper justo. Etiam pulvinar, mauris nec malesuada sollicitudin, est ipsum condimentum velit, ac ultricies nisi nunc nec diam. Nam vel ornare nunc, non viverra quam. Phasellus lacus metus, elementum nec elit at, semper tempus odio. Phasellus dictum blandit erat non posuere. Sed eu imperdiet lorem. Suspendisse malesuada nunc quis facilisis suscipit. Aenean consectetur tellus risus, sed blandit erat efficitur et. Donec sit amet diam sem. Nulla vel varius est. Phasellus at accumsan risus. Etiam at mattis nunc, vitae fringilla ligula. Praesent a convallis purus, ut lobortis orci. Integer mollis dignissim mi, eget molestie nibh suscipit nec.";
@@ -49,7 +55,10 @@ function App() {
                 <Nav.Link eventKey="4">Text</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="5">Video Background</Nav.Link>
+                <Nav.Link eventKey="5">Card</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="6">Video Background</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -59,6 +68,12 @@ function App() {
                 <Navbar
                   logo={logo}
                   lettering={lettering}
+                  hamburger={hamburger}
+                  options={navbarOptions}
+                />
+                <Navbar
+                  logo={logo}
+                  noLettering
                   hamburger={hamburger}
                   options={navbarOptions}
                 />
@@ -74,18 +89,21 @@ function App() {
                 <Button text="Dark" variant="dark" />
               </Tab.Pane>
               <Tab.Pane eventKey="2">
-                <Title text="Lorem Ipsum" theme="dark" />
-                <Title text="Lorem Ipsum" theme="light" />
+                <Title text={words} theme="dark" overlineColor="#F07F00" />
+                <Title text={words} theme="light" overlineColor="#C1D910" />
               </Tab.Pane>
               <Tab.Pane eventKey="3">
-                <Subtitle text="Lorem Ipsum" theme="dark" />
-                <Subtitle text="Lorem Ipsum" theme="light" />
+                <Subtitle text={words} theme="dark" />
+                <Subtitle text={words} theme="light" />
               </Tab.Pane>
               <Tab.Pane eventKey="4">
                 <Text text={paragraph} theme="dark" />
                 <Text text={paragraph} theme="light" />
               </Tab.Pane>
               <Tab.Pane eventKey="5">
+                <Card bg={img1} title={words} text={phrase} />
+              </Tab.Pane>
+              <Tab.Pane eventKey="6">
                 <VideoBackground
                   gif={gif}
                   mp4={mp4}
