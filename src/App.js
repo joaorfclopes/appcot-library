@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import VideoBackground from "./components/VideoBackground";
 import Button from "./components/Button";
 import Title from "./components/Title";
+import Subtitle from "./components/Subtitle";
+import Text from "./components/Text";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -21,6 +23,9 @@ function App() {
     text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     text2: "Sed non congue turpis, sed semper justo",
   };
+
+  const paragraph =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non congue turpis, sed semper justo. Etiam pulvinar, mauris nec malesuada sollicitudin, est ipsum condimentum velit, ac ultricies nisi nunc nec diam. Nam vel ornare nunc, non viverra quam. Phasellus lacus metus, elementum nec elit at, semper tempus odio. Phasellus dictum blandit erat non posuere. Sed eu imperdiet lorem. Suspendisse malesuada nunc quis facilisis suscipit. Aenean consectetur tellus risus, sed blandit erat efficitur et. Donec sit amet diam sem. Nulla vel varius est. Phasellus at accumsan risus. Etiam at mattis nunc, vitae fringilla ligula. Praesent a convallis purus, ut lobortis orci. Integer mollis dignissim mi, eget molestie nibh suscipit nec.";
 
   return (
     <div className="App">
@@ -39,6 +44,12 @@ function App() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="3">Title</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="4">Subtitle</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="5">Text</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -71,8 +82,16 @@ function App() {
                 <Button text="Dark" variant="dark" />
               </Tab.Pane>
               <Tab.Pane eventKey="3">
-                <Title text="Lorem Ipsum" theme="light" />
                 <Title text="Lorem Ipsum" theme="dark" />
+                <Title text="Lorem Ipsum" theme="light" />
+              </Tab.Pane>
+              <Tab.Pane eventKey="4">
+                <Subtitle text="Lorem Ipsum" theme="dark" />
+                <Subtitle text="Lorem Ipsum" theme="light" />
+              </Tab.Pane>
+              <Tab.Pane eventKey="5">
+                <Text text={paragraph} theme="dark" />
+                <Text text={paragraph} theme="light" />
               </Tab.Pane>
             </Tab.Content>
           </Col>

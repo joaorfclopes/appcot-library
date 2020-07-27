@@ -20,7 +20,7 @@ export default class VideoBackground extends React.Component {
             </React.Fragment>
           )}
           <div className="frontText">
-            <div className="text">
+            <div className="videoText">
               <p>{this.props.text1}</p>
               <br />
               <p>{this.props.text2}</p>
