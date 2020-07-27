@@ -71,6 +71,7 @@ function App() {
                   hamburger={hamburger}
                   options={navbarOptions}
                 />
+                <br />
                 <Navbar
                   logo={logo}
                   noLettering
@@ -102,7 +103,8 @@ function App() {
               </Tab.Pane>
               <Tab.Pane eventKey="5">
                 <Card bg={img1} title={words} text={phrase} />
-                <CardDeck style={{ marginTop: "20px" }}>
+                <br />
+                <CardDeck>
                   <Card bg={img1} title={words} text={phrase} />
                   <Card bg={img1} title={words} text={phrase} />
                   <Card bg={img1} title={words} text={phrase} />
