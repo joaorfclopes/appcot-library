@@ -1,1 +1,1 @@
-yarn add react-bootstrap bootstrap jquery
+yarn add react-bootstrap bootstrap jquery style-it

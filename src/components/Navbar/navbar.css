@@ -7,13 +7,17 @@
 }
 
 .logo-container {
-    margin: 10px 0px 20px 20px;
     display: inline-block;
+    line-height: 70px;
+    margin-left: 40px;
+}
+
+.logo-container img {
+    vertical-align: middle;
 }
 
 .logo {
     width: 50px;
-    margin-left: 20px;
 }
 
 .logo:hover {
@@ -27,25 +31,8 @@
 
 .options-container {
     float: right;
-    margin: 20px 40px 20px 0px;
-}
-
-.option {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to right, #F07F00, #F07F00 50%, black 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position 300ms ease;
-}
-
-.option:hover,
-.option:active {
-    cursor: pointer;
-    background-position: 0 100%;
+    margin-right: 40px;
+    line-height: 70px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -66,17 +53,20 @@
         margin-right: 10px;
         font-size: 18px;
     }
-
 }
 
 @media only screen and (max-width: 800px) {
-    .logo {
-        margin-left: 10px;
+    .logo-container {
+        margin-left: 20px;
+    }
+
+    .options-container {
+        margin-right: 20px;
     }
 
     .hamburger {
         width: 30px;
-        display: block;
+        vertical-align: middle;
     }
 
     .close-menu {
@@ -93,9 +83,8 @@
     .option {
         display: block;
         font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .open-options {
