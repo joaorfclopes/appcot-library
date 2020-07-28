@@ -4,6 +4,7 @@
     height: 70px;
     background: whitesmoke;
     z-index: 999;
+    top: 0;
 }
 
 .logo-container {
