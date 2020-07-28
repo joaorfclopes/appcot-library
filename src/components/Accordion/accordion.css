@@ -1,18 +1,19 @@
 .accordion-card {
+    border: none !important;
     border-radius: 0 !important;
-    border-color: black !important;
+    background: whitesmoke !important;
 }
 
 .accordion-card-header {
     padding: 0 !important;
-    background: white !important;
     border: none !important;
+    background: whitesmoke !important;
 }
 
 .accordion-toggle {
     width: 100%;
     text-decoration: none !important;
-    padding: 15px !important;
+    padding: 1.25rem !important;
     color: black !important;
 }
 
@@ -20,6 +21,12 @@
     float: left;
     text-align: left;
     width: 90%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.accordion-body {
+    padding-top: 10px !important;
 }
 
 .collapsible-link {

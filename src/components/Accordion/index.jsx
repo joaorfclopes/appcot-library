@@ -1,5 +1,6 @@
 import React from "react";
 import { Accordion as BootstrapAccordion, Card, Button } from "react-bootstrap";
+import Style from "style-it";
 import "./accordion.css";
 
 export default class Accordion extends React.Component {
@@ -19,24 +20,26 @@ export default class Accordion extends React.Component {
       <BootstrapAccordion className="accordion">
         <Card className="accordion-card">
           <Card.Header className="accordion-card-header">
-            <BootstrapAccordion.Toggle
-              onClick={this.toggle}
-              className="accordion-toggle collapsible-link"
-              aria-expanded={this.state.expanded}
-              as={Button}
-              variant="link"
-              eventKey="0"
-            >
-              <div className="accordion-title">Click Me!</div>
-            </BootstrapAccordion.Toggle>
+            <Style>
+              {`
+                .collapsible-link:hover>div {
+                  color: ${this.props.hoverColor};
+                }
+              `}
+              <BootstrapAccordion.Toggle
+                onClick={this.toggle}
+                className="accordion-toggle collapsible-link"
+                aria-expanded={this.state.expanded}
+                as={Button}
+                variant="link"
+                eventKey="0"
+              >
+                <div className="accordion-title">{this.props.title}</div>
+              </BootstrapAccordion.Toggle>
+            </Style>
           </Card.Header>
-          <BootstrapAccordion.Collapse
-            eventKey="0"
-            className="accordion-collapse"
-          >
-            <Card.Body className="accordion-body">
-              Hello! I'm the body
-            </Card.Body>
+          <BootstrapAccordion.Collapse eventKey="0">
+            <Card.Body className="accordion-body">{this.props.body}</Card.Body>
           </BootstrapAccordion.Collapse>
         </Card>
       </BootstrapAccordion>

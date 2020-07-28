@@ -34,6 +34,9 @@ function App() {
   const paragraph =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non congue turpis, sed semper justo. Etiam pulvinar, mauris nec malesuada sollicitudin, est ipsum condimentum velit, ac ultricies nisi nunc nec diam. Nam vel ornare nunc, non viverra quam. Phasellus lacus metus, elementum nec elit at, semper tempus odio. Phasellus dictum blandit erat non posuere. Sed eu imperdiet lorem. Suspendisse malesuada nunc quis facilisis suscipit. Aenean consectetur tellus risus, sed blandit erat efficitur et. Donec sit amet diam sem. Nulla vel varius est. Phasellus at accumsan risus. Etiam at mattis nunc, vitae fringilla ligula. Praesent a convallis purus, ut lobortis orci. Integer mollis dignissim mi, eget molestie nibh suscipit nec.";
 
+  const mainColor = "#F07F00";
+  const secondaryColor = "#C1D910";
+
   return (
     <div className="App">
       <Tab.Container id="left-tabs-example" defaultActiveKey="0">
@@ -80,7 +83,7 @@ function App() {
                   lettering={lettering}
                   hamburger={hamburger}
                   options={navbarOptions}
-                  optionColor="#F07F00"
+                  optionColor={mainColor}
                 />
                 <br />
                 <Navbar
@@ -88,7 +91,7 @@ function App() {
                   noLettering
                   hamburger={hamburger}
                   options={navbarOptions}
-                  optionColor="#C1D910"
+                  optionColor={secondaryColor}
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="1">
@@ -102,8 +105,12 @@ function App() {
                 <Button text="Dark" variant="dark" />
               </Tab.Pane>
               <Tab.Pane eventKey="2">
-                <Title text={words} theme="dark" overlineColor="#F07F00" />
-                <Title text={words} theme="light" overlineColor="#C1D910" />
+                <Title text={words} theme="dark" overlineColor={mainColor} />
+                <Title
+                  text={words}
+                  theme="light"
+                  overlineColor={secondaryColor}
+                />
               </Tab.Pane>
               <Tab.Pane eventKey="3">
                 <Subtitle text={words} theme="dark" />
@@ -140,7 +147,7 @@ function App() {
                     <Title
                       text={words}
                       theme="light"
-                      overlineColor="#F07F00"
+                      overlineColor={mainColor}
                     />,
                     <Subtitle text={words} theme="light" />,
                     <Text text={paragraph} theme="light" />,
@@ -158,7 +165,7 @@ function App() {
                     <Title
                       text={words}
                       theme="light"
-                      overlineColor="#F07F00"
+                      overlineColor={mainColor}
                     />,
                     <Subtitle text={words} theme="light" />,
                     <Text text={paragraph} theme="light" />,
@@ -190,7 +197,16 @@ function App() {
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="9">
-                <Accordion />
+                <Accordion
+                  title={words}
+                  body={paragraph}
+                  hoverColor={mainColor}
+                />
+                <Accordion
+                  title={words}
+                  body={paragraph}
+                  hoverColor={secondaryColor}
+                />
               </Tab.Pane>
             </Tab.Content>
           </Col>
