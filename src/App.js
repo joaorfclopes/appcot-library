@@ -20,6 +20,7 @@ import mp4 from "./assets/mp4/video.mp4";
 import img1 from "./assets/jpg/img1.jpg";
 import img2 from "./assets/jpg/img2.jpg";
 import img3 from "./assets/jpg/img3.jpg";
+import background from "./assets/jpg/background.jpg";
 
 function App() {
   const navbarOptions = ["Lorem", "Ipsum", "Dolor", "Sit", "Amet"];
@@ -126,6 +127,7 @@ function App() {
               </Tab.Pane>
               <Tab.Pane eventKey="7">
                 <FixedBackground
+                  bgImage={background}
                   content={[
                     <Title
                       text={words}
