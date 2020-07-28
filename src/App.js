@@ -11,6 +11,7 @@ import Card from "./components/Card";
 import VideoBackground from "./components/VideoBackground";
 import BackgroundImg from "./components/BackgroundImg";
 import SideBySide from "./components/SideBySide";
+import Accordion from "./components/Accordion";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -65,6 +66,9 @@ function App() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="8">Side By Side</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="9">Accordion</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -184,6 +188,9 @@ function App() {
                   ]}
                   img={img1}
                 />
+              </Tab.Pane>
+              <Tab.Pane eventKey="9">
+                <Accordion />
               </Tab.Pane>
             </Tab.Content>
           </Col>

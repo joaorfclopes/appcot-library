@@ -5,18 +5,18 @@ import "./card.css";
 export default class Card extends React.Component {
   render = () => {
     return (
-      <BootstrapCard className="card">
+      <BootstrapCard className="appcot-card">
         <div
-          className="card-bg"
+          className="appcot-card-bg"
           style={{
             backgroundImage: `url(${this.props.bg})`,
           }}
         ></div>
-        <BootstrapCard.Body className="card-body">
-          <BootstrapCard.Title className="card-title">
+        <BootstrapCard.Body className="appcot-card-body">
+          <BootstrapCard.Title className="appcot-card-title">
             {this.props.title}
           </BootstrapCard.Title>
-          <BootstrapCard.Text className="card-text">
+          <BootstrapCard.Text className="appcot-card-text">
             {this.props.text}
           </BootstrapCard.Text>
         </BootstrapCard.Body>
