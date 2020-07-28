@@ -9,7 +9,8 @@ import Subtitle from "./components/Subtitle";
 import Text from "./components/Text";
 import Card from "./components/Card";
 import VideoBackground from "./components/VideoBackground";
-import FixedBackground from "./components/FixedBackground";
+import BackgroundImg from "./components/BackgroundImg";
+import SideBySide from "./components/SideBySide";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -60,7 +61,10 @@ function App() {
                 <Nav.Link eventKey="6">Video Background</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="7">Fixed Background</Nav.Link>
+                <Nav.Link eventKey="7">Background Image</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="8">Side By Side</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -126,7 +130,7 @@ function App() {
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="7">
-                <FixedBackground
+                <BackgroundImg
                   bgImage={background}
                   content={[
                     <Title
@@ -141,6 +145,44 @@ function App() {
                     <Subtitle text={words} theme="light" />,
                     <Text text={paragraph} theme="light" />,
                   ]}
+                />
+                <br />
+                <BackgroundImg
+                  bgImage={background}
+                  fixedBackground
+                  content={[
+                    <Title
+                      text={words}
+                      theme="light"
+                      overlineColor="#F07F00"
+                    />,
+                    <Subtitle text={words} theme="light" />,
+                    <Text text={paragraph} theme="light" />,
+                    <Subtitle text={words} theme="dark" />,
+                    <Text text={paragraph} theme="dark" />,
+                    <Subtitle text={words} theme="light" />,
+                    <Text text={paragraph} theme="light" />,
+                  ]}
+                />
+              </Tab.Pane>
+              <Tab.Pane eventKey="8">
+                <SideBySide
+                  text={[
+                    <Subtitle text={words} theme="dark" />,
+                    <Text text={paragraph} theme="dark" />,
+                    <Text text={paragraph} theme="dark" />,
+                  ]}
+                  img={img1}
+                />
+                <br />
+                <SideBySide
+                  inverted
+                  text={[
+                    <Subtitle text={words} theme="dark" />,
+                    <Text text={paragraph} theme="dark" />,
+                    <Text text={paragraph} theme="dark" />,
+                  ]}
+                  img={img1}
                 />
               </Tab.Pane>
             </Tab.Content>

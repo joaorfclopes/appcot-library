@@ -1,21 +1,23 @@
 import React from "react";
 import Style from "style-it";
-import "./fixedBackground.css";
+import "./backgroundImg.css";
 
-export default class FixedBackground extends React.Component {
+export default class BackgroundImg extends React.Component {
   render = () => {
     return (
       <Style>
         {`
-          .fixed-background {
+          .background-img {
             background: url(${this.props.bgImage});
             background-position: 50%;
             background-repeat: no-repeat;
             background-size: cover;
-            background-attachment: fixed;
+            background-attachment: ${
+              this.props.fixedBackground ? `fixed` : `scroll`
+            };
           }
         `}
-        <div className="fixed-background">{this.props.content}</div>
+        <div className="background-img">{this.props.content}</div>
       </Style>
     );
   };

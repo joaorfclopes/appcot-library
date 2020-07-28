@@ -4,12 +4,12 @@ import "./title.css";
 export default class Title extends React.Component {
   render = () => {
     return (
-      <p
+      <h1
         className={`title ${this.props.theme}`}
         style={{ textDecorationColor: this.props.overlineColor }}
       >
         {this.props.text}
-      </p>
+      </h1>
     );
   };
 }

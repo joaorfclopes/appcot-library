@@ -10,15 +10,3 @@
 .light {
     color: whitesmoke;
 }
-
-@media only screen and (min-width: 800px) {
-    .subtitle {
-        font-size: 30px;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .subtitle {
-        font-size: 3.6vh;
-    }
-}
