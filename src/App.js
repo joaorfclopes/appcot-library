@@ -8,7 +8,7 @@ import Title from "./components/Title";
 import Subtitle from "./components/Subtitle";
 import Text from "./components/Text";
 import Card from "./components/Card";
-import VideoBackground from "./components/VideoBackground";
+import BackgroundVideo from "./components/BackgroundVideo";
 import BackgroundImg from "./components/BackgroundImg";
 import SideBySide from "./components/SideBySide";
 import Accordion from "./components/Accordion";
@@ -130,7 +130,7 @@ function App() {
                 </CardDeck>
               </Tab.Pane>
               <Tab.Pane eventKey="6">
-                <VideoBackground
+                <BackgroundVideo
                   gif={gif}
                   mp4={mp4}
                   content={[

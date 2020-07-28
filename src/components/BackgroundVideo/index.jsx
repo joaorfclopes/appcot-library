@@ -1,12 +1,12 @@
 import React from "react";
-import "./videoBackground.css";
+import "./backgroundVideo.css";
 
-export default class VideoBackground extends React.Component {
+export default class BackgroundVideo extends React.Component {
   render = () => {
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
     return (
-      <div className="video-background">
+      <div className="background-video">
         <div className="video-container">
           {iOS ? (
             <React.Fragment>
