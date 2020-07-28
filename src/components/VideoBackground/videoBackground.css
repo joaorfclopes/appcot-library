@@ -21,11 +21,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 .front-text {
-    font-weight: bold;
     color: whitesmoke;
     text-align: center;
     position: absolute;
@@ -45,14 +44,20 @@
     vertical-align: middle;
 }
 
+.video-text * {
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+
 @media only screen and (min-width: 800px) {
-    .video-text {
+    .video-text * {
         font-size: 50px;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .video-text {
+    .video-text * {
         font-size: 4vh;
     }
 }

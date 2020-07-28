@@ -24,11 +24,6 @@ import img3 from "./assets/jpg/img3.jpg";
 function App() {
   const navbarOptions = ["Lorem", "Ipsum", "Dolor", "Sit", "Amet"];
 
-  const videoBackgroundTexts = {
-    text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    text2: "Sed non congue turpis, sed semper justo",
-  };
-
   const words = "Lorem Ipsum";
 
   const phrase = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
@@ -122,14 +117,21 @@ function App() {
                 <VideoBackground
                   gif={gif}
                   mp4={mp4}
-                  text1={videoBackgroundTexts.text1}
-                  text2={videoBackgroundTexts.text2}
+                  content={[
+                    <Subtitle text={words} theme="light" />,
+                    <Subtitle text={phrase} theme="light" />,
+                    <Button text="Warning" variant="warning" />,
+                  ]}
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="7">
                 <FixedBackground
                   content={[
-                    <Title text={words} theme="light" overlineColor="#F07F00" />,
+                    <Title
+                      text={words}
+                      theme="light"
+                      overlineColor="#F07F00"
+                    />,
                     <Subtitle text={words} theme="light" />,
                     <Text text={paragraph} theme="light" />,
                     <Subtitle text={words} theme="dark" />,
