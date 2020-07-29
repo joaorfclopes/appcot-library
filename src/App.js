@@ -93,6 +93,7 @@ function App() {
                   options={navbarOptions}
                   optionColor={secondaryColor}
                 />
+                <div className="Lorem" style={{ height: "200vh" }}></div>
               </Tab.Pane>
               <Tab.Pane eventKey="1">
                 <Button text="Primary" variant="primary" />

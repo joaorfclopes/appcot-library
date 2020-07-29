@@ -14,8 +14,17 @@ export default class Navbar extends React.Component {
     $(".options").removeClass("open-options");
   };
 
+  scrollToSection = (el) => {
+    try {
+      $("html, body").animate({
+        scrollTop: $("." + el).offset().top - 60,
+      });
+      this.closeMenu();
+    } catch {}
+  };
+
   render = () => {
-    const options = this.props.options;
+    const options = this.props.options || [""];
 
     return (
       <div className="navbar-container">
@@ -65,7 +74,11 @@ export default class Navbar extends React.Component {
                       background-position: 0 100%;
                     }
                   `}
-                  <span className="option" key={option}>
+                  <span
+                    className="option"
+                    key={option}
+                    onClick={() => this.scrollToSection(option)}
+                  >
                     {option}
                   </span>
                 </Style>
