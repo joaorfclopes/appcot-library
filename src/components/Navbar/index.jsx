@@ -14,17 +14,45 @@ export default class Navbar extends React.Component {
     $(".options").removeClass("open-options");
   };
 
-  scrollToSection = (el) => {
-    try {
-      $("html, body").animate({
-        scrollTop: $("." + el).offset().top - 60,
+  scrollToSection = () => {
+    $(document).ready(function () {
+      $("a").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          try {
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          } catch {}
+        }
       });
-      this.closeMenu();
-    } catch {}
+    });
+  };
+
+  formatString = (str) => {
+    if (str.indexOf(" ") >= 0) {
+      str = str.replace(/\s/g, "");
+    }
+    if (str.indexOf("'") >= 0) {
+      str = str.replace("'", "");
+    }
+    if (str.indexOf("ç") >= 0) {
+      str = str.replace("ç", "c");
+    }
+    return str.toLowerCase();
   };
 
   render = () => {
     const options = this.props.options || [""];
+
+    this.scrollToSection();
 
     return (
       <div className="navbar-container">
@@ -74,13 +102,14 @@ export default class Navbar extends React.Component {
                       background-position: 0 100%;
                     }
                   `}
-                  <span
+                  <a
+                    href={"#" + this.formatString(option)}
                     className="option"
                     key={option}
-                    onClick={() => this.scrollToSection(option)}
+                    onClick={this.closeMenu}
                   >
                     {option}
-                  </span>
+                  </a>
                 </Style>
               ))}
             </div>
