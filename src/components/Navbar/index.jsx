@@ -14,6 +14,19 @@ export default class Navbar extends React.Component {
     $(".options").removeClass("open-options");
   };
 
+  scrollToTop = (el) => {
+    try {
+      $("html, body").animate(
+        {
+          scrollTop: $(`#${el}`).offset().top - 70,
+        },
+        "slow",
+        "swing"
+      );
+      window.location.hash = el;
+    } catch {}
+  };
+
   scrollToSection = () => {
     $(document).ready(function () {
       $("a").on("click", function (event) {
@@ -23,13 +36,12 @@ export default class Navbar extends React.Component {
           try {
             $("html, body").animate(
               {
-                scrollTop: $(hash).offset().top,
+                scrollTop: $(hash).offset().top - 70,
               },
-              800,
-              function () {
-                window.location.hash = hash;
-              }
+              "slow",
+              "swing"
             );
+            window.location.hash = hash;
           } catch {}
         }
       });
@@ -58,7 +70,12 @@ export default class Navbar extends React.Component {
       <div className="navbar-container">
         <div className="logo-container">
           <span>
-            <img className="logo" src={this.props.logo} alt="logo" />
+            <img
+              className="logo"
+              src={this.props.logo}
+              alt="logo"
+              onClick={() => this.scrollToTop(options[0])}
+            />
             {!this.props.noLettering && (
               <img
                 className="lettering"
