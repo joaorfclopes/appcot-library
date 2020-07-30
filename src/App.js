@@ -38,6 +38,10 @@ function App() {
   const mainColor = "#F07F00";
   const secondaryColor = "#C1D910";
 
+  const action = () => {
+    alert("This is an action!");
+  };
+
   return (
     <div className="App">
       <Tab.Container id="left-tabs-example" defaultActiveKey="0">
@@ -100,7 +104,7 @@ function App() {
                 <div id="lorem" style={{ height: "200vh" }}></div>
               </Tab.Pane>
               <Tab.Pane eventKey="1">
-                <Button text="Primary" variant="primary" />
+                <Button text="Primary" variant="primary" action={action} />
                 <Button text="Secondary" variant="secondary" />
                 <Button text="Success" variant="success" />
                 <Button text="Warning" variant="warning" />
