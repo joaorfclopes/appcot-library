@@ -12,6 +12,7 @@ import BackgroundVideo from "./components/BackgroundVideo";
 import BackgroundImg from "./components/BackgroundImg";
 import SideBySide from "./components/SideBySide";
 import Accordion from "./components/Accordion";
+import CenteredContent from "./components/CenteredContent";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -62,7 +63,7 @@ function App() {
                 <Nav.Link eventKey="5">Card</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="6">Video Background</Nav.Link>
+                <Nav.Link eventKey="6">Background Video</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="7">Background Image</Nav.Link>
@@ -72,6 +73,9 @@ function App() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="9">Accordion</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="10">Centered Content</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -134,11 +138,15 @@ function App() {
                 <BackgroundVideo
                   gif={gif}
                   mp4={mp4}
-                  content={[
-                    <Subtitle text={words} theme="light" />,
-                    <Subtitle text={phrase} theme="light" />,
-                    <Button text="Warning" variant="warning" />,
-                  ]}
+                  content={
+                    <CenteredContent
+                      content={[
+                        <Subtitle text={words} theme="light" />,
+                        <Subtitle text={phrase} theme="light" />,
+                        <Button text="Warning" variant="warning" />,
+                      ]}
+                    />
+                  }
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="7">
@@ -207,6 +215,15 @@ function App() {
                   title={words}
                   body={paragraph}
                   hoverColor={secondaryColor}
+                />
+              </Tab.Pane>
+              <Tab.Pane eventKey="10">
+                <CenteredContent
+                  content={[
+                    <Subtitle text={words} theme="dark" />,
+                    <Subtitle text={phrase} theme="dark" />,
+                    <Button text="Warning" variant="warning" />,
+                  ]}
                 />
               </Tab.Pane>
             </Tab.Content>
