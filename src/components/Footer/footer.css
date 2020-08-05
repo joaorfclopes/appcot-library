@@ -1,8 +1,57 @@
 footer {
-    height: 30vh;
+    min-height: 30vh;
     position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #292929;
+}
+
+.footer-wrapper {
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.footer-wrapper>div {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+}
+
+.signature {
+    position: absolute;
+    bottom: 0;
+}
+
+.signature-img {
+    width: 25px;
+}
+
+.widget {
+    vertical-align: top;
+}
+
+.widget-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.widget-item {
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+.widget-item:hover {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-wrapper>div {
+        width: 100%;
+        display: block;
+    }
 }
