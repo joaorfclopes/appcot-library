@@ -67,7 +67,7 @@ export default class Navbar extends React.Component {
     this.scrollToSection();
 
     return (
-      <div className="navbar-container">
+      <header className="navbar-container">
         <div className="logo-container">
           <span>
             <img
@@ -132,7 +132,7 @@ export default class Navbar extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </header>
     );
   };
 }

@@ -13,6 +13,7 @@ import BackgroundImg from "./components/BackgroundImg";
 import SideBySide from "./components/SideBySide";
 import Accordion from "./components/Accordion";
 import CenteredContent from "./components/CenteredContent";
+import Footer from "./components/Footer";
 
 /* Sample Assets */
 import logo from "./assets/svg/logo.svg";
@@ -80,6 +81,9 @@ function App() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="10">Centered Content</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="11">Footer</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
@@ -229,6 +233,9 @@ function App() {
                     <Button text="Warning" variant="warning" />,
                   ]}
                 />
+              </Tab.Pane>
+              <Tab.Pane eventKey="11">
+                <Footer />
               </Tab.Pane>
             </Tab.Content>
           </Col>

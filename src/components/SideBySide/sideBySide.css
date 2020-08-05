@@ -6,7 +6,7 @@
 }
 
 .side-by-side>div {
-    padding: 40px;
+    padding: 2%;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -29,7 +29,6 @@
 
     .side-by-side>div {
         width: 100%;
-        padding: 20px;
     }
 
     .side-by-side-img {
