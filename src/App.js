@@ -16,7 +16,7 @@ import CenteredContent from "./components/CenteredContent";
 import Footer from "./components/Footer";
 
 /* Sample Assets */
-import logo from "./assets/svg/logo.svg";
+import logo from "./assets/svg/appcot.svg";
 import lettering from "./assets/svg/lettering.svg";
 import hamburger from "./assets/svg/hamburger.svg";
 import gif from "./assets/gif/video.gif";

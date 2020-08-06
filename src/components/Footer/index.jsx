@@ -8,7 +8,7 @@ import {
 } from "react-notifications";
 
 /* Assets */
-import logo from "../../assets/svg/logo.svg";
+import logo from "../../assets/svg/appcot.svg";
 
 export default class Footer extends React.Component {
   scrollToSection = () => {
