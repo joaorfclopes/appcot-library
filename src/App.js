@@ -39,6 +39,8 @@ function App() {
   const mainColor = "#F07F00";
   const secondaryColor = "#C1D910";
 
+  const contactUsOptions = ["example@gmail.com", "(+351) 912 345 678"];
+
   const action = () => {
     alert("This is an action!");
   };
@@ -105,7 +107,6 @@ function App() {
                   options={navbarOptions}
                   optionColor={secondaryColor}
                 />
-                <div id="lorem" style={{ height: "200vh" }}></div>
               </Tab.Pane>
               <Tab.Pane eventKey="1">
                 <Button text="Primary" variant="primary" action={action} />
@@ -235,7 +236,11 @@ function App() {
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="11">
-                <Footer />
+                <Footer
+                  bgColor="#292929"
+                  goToOptions={navbarOptions}
+                  contactUsOptions={contactUsOptions}
+                />
               </Tab.Pane>
             </Tab.Content>
           </Col>
