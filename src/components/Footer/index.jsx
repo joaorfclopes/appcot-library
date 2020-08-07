@@ -6,9 +6,11 @@ import {
   NotificationContainer,
   NotificationManager,
 } from "react-notifications";
-
-/* Assets */
-import logo from "../../assets/svg/appcot.svg";
+import appcot from "../../assets/svg/appcot.svg";
+import instagram from "../../assets/svg/instagram.svg";
+import facebook from "../../assets/svg/facebook.svg";
+import twitter from "../../assets/svg/twitter.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
 
 export default class Footer extends React.Component {
   scrollToSection = () => {
@@ -92,10 +94,59 @@ export default class Footer extends React.Component {
           </div>
           <div className="widget">
             <h5 className="widget-title">Social Media</h5>
-            <ul className="widget-list"></ul>
+            <ul className="widget-list">
+              {this.props.instagram && (
+                <li className="widget-li inline">
+                  <a
+                    href={this.props.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      className="media-icon"
+                      src={instagram}
+                      alt="instagram"
+                    />
+                  </a>
+                </li>
+              )}
+              {this.props.facebook && (
+                <li className="widget-li inline">
+                  <a
+                    href={this.props.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img className="media-icon" src={facebook} alt="facebook" />
+                  </a>
+                </li>
+              )}
+              {this.props.twitter && (
+                <li className="widget-li inline">
+                  <a
+                    href={this.props.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img className="media-icon" src={twitter} alt="twitter" />
+                  </a>
+                </li>
+              )}
+              {this.props.linkedin && (
+                <li className="widget-li inline">
+                  <a
+                    href={this.props.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img className="media-icon" src={linkedin} alt="linkedin" />
+                  </a>
+                </li>
+              )}
+            </ul>
           </div>
           <p className="signature">
-            Powered by <img className="signature-img" src={logo} alt="logo" />{" "}
+            Powered by <img className="signature-img" src={appcot} alt="logo" />{" "}
             Appcot
           </p>
         </div>

@@ -240,6 +240,10 @@ function App() {
                   bgColor="#292929"
                   goToOptions={navbarOptions}
                   contactUsOptions={contactUsOptions}
+                  instagram="https://www.instagram.com/"
+                  facebook="https://www.facebook.com/"
+                  twitter="https://twitter.com/home"
+                  linkedin="https://www.linkedin.com/"
                 />
               </Tab.Pane>
             </Tab.Content>
