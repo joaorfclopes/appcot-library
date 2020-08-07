@@ -71,7 +71,7 @@ export default class Footer extends React.Component {
     return (
       <footer
         className={`footer ${this.props.dark && "dark"}`}
-        style={{ backgroundColor: this.props.bgColor }}
+        style={{ backgroundColor: `${this.props.dark && "#292929"}` }}
       >
         <div className="footer-wrapper">
           <div className="widget">
@@ -99,7 +99,7 @@ export default class Footer extends React.Component {
                       className="widget-item-img"
                       src={this.props.dark ? emailDark : emailLight}
                       alt="email"
-                    />
+                    />{" "}
                     {option}
                   </a>
                 </li>
@@ -112,7 +112,7 @@ export default class Footer extends React.Component {
                         className="widget-item-img"
                         src={this.props.dark ? phoneDark : phoneLight}
                         alt="phone"
-                      />
+                      />{" "}
                       {option}
                     </span>
                   </CopyToClipboard>

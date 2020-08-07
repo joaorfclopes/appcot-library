@@ -121,20 +121,16 @@ function App() {
                 <Button text="Dark" variant="dark" />
               </Tab.Pane>
               <Tab.Pane eventKey="2">
-                <Title text={words} theme="light" overlineColor={mainColor} />
-                <Title
-                  text={words}
-                  theme="dark"
-                  overlineColor={secondaryColor}
-                />
+                <Title text={words} overlineColor={mainColor} />
+                <Title dark text={words} overlineColor={secondaryColor} />
               </Tab.Pane>
               <Tab.Pane eventKey="3">
-                <Subtitle text={words} theme="light" />
-                <Subtitle text={words} theme="dark" />
+                <Subtitle text={words} />
+                <Subtitle dark text={words} />
               </Tab.Pane>
               <Tab.Pane eventKey="4">
-                <Text text={paragraph} theme="light" />
-                <Text text={paragraph} theme="dark" />
+                <Text text={paragraph} />
+                <Text dark text={paragraph} />
               </Tab.Pane>
               <Tab.Pane eventKey="5">
                 <Card bg={img1} title={words} text={phrase} />
@@ -152,8 +148,8 @@ function App() {
                   content={
                     <CenteredContent
                       content={[
-                        <Subtitle text={words} theme="dark" />,
-                        <Subtitle text={phrase} theme="dark" />,
+                        <Subtitle dark text={words} />,
+                        <Subtitle dark text={phrase} />,
                         <Button text="Warning" variant="warning" />,
                       ]}
                     />
@@ -164,17 +160,13 @@ function App() {
                 <BackgroundImg
                   bgImage={background}
                   content={[
-                    <Title
-                      text={words}
-                      theme="dark"
-                      overlineColor={mainColor}
-                    />,
-                    <Subtitle text={words} theme="dark" />,
-                    <Text text={paragraph} theme="dark" />,
-                    <Subtitle text={words} theme="light" />,
-                    <Text text={paragraph} theme="light" />,
-                    <Subtitle text={words} theme="dark" />,
-                    <Text text={paragraph} theme="dark" />,
+                    <Title dark text={words} overlineColor={mainColor} />,
+                    <Subtitle dark text={words} />,
+                    <Text dark text={paragraph} />,
+                    <Subtitle text={words} />,
+                    <Text text={paragraph} />,
+                    <Subtitle dark text={words} />,
+                    <Text dark text={paragraph} />,
                   ]}
                 />
                 <br />
@@ -182,26 +174,22 @@ function App() {
                   bgImage={background}
                   fixedBackground
                   content={[
-                    <Title
-                      text={words}
-                      theme="light"
-                      overlineColor={mainColor}
-                    />,
-                    <Subtitle text={words} theme="dark" />,
-                    <Text text={paragraph} theme="dark" />,
-                    <Subtitle text={words} theme="light" />,
-                    <Text text={paragraph} theme="light" />,
-                    <Subtitle text={words} theme="dark" />,
-                    <Text text={paragraph} theme="dark" />,
+                    <Title text={words} overlineColor={mainColor} />,
+                    <Subtitle dark text={words} />,
+                    <Text dark text={paragraph} />,
+                    <Subtitle text={words} />,
+                    <Text text={paragraph} />,
+                    <Subtitle dark text={words} />,
+                    <Text dark text={paragraph} />,
                   ]}
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="8">
                 <SideBySide
                   text={[
-                    <Subtitle text={words} theme="light" />,
-                    <Text text={paragraph} theme="light" />,
-                    <Text text={paragraph} theme="light" />,
+                    <Subtitle text={words} />,
+                    <Text text={paragraph} />,
+                    <Text text={paragraph} />,
                   ]}
                   img={img1}
                 />
@@ -209,9 +197,9 @@ function App() {
                 <SideBySide
                   inverted
                   text={[
-                    <Subtitle text={words} theme="light" />,
-                    <Text text={paragraph} theme="light" />,
-                    <Text text={paragraph} theme="light" />,
+                    <Subtitle text={words} />,
+                    <Text text={paragraph} />,
+                    <Text text={paragraph} />,
                   ]}
                   img={img1}
                 />
@@ -231,16 +219,25 @@ function App() {
               <Tab.Pane eventKey="10">
                 <CenteredContent
                   content={[
-                    <Subtitle text={words} theme="light" />,
-                    <Subtitle text={phrase} theme="light" />,
+                    <Subtitle text={words} />,
+                    <Subtitle text={phrase} />,
                     <Button text="Warning" variant="warning" />,
                   ]}
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="11">
                 <Footer
+                  goToOptions={navbarOptions}
+                  mailingList={mailingList}
+                  mobileList={mobileList}
+                  instagram="https://www.instagram.com/"
+                  facebook="https://www.facebook.com/"
+                  twitter="https://twitter.com/home"
+                  linkedin="https://www.linkedin.com/"
+                />
+                <br />
+                <Footer
                   dark
-                  bgColor="black"
                   goToOptions={navbarOptions}
                   mailingList={mailingList}
                   mobileList={mobileList}

@@ -3,6 +3,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    background-color: whitesmoke;
 }
 
 .dark {
@@ -49,7 +50,6 @@ footer {
 
 .widget-item-img {
     width: 18px;
-    margin-right: 5px;
 }
 
 .inline {
