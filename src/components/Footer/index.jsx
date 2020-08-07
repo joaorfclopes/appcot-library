@@ -7,10 +7,20 @@ import {
   NotificationManager,
 } from "react-notifications";
 import appcot from "../../assets/svg/appcot.svg";
-import instagram from "../../assets/svg/instagram.svg";
-import facebook from "../../assets/svg/facebook.svg";
-import twitter from "../../assets/svg/twitter.svg";
-import linkedin from "../../assets/svg/linkedin.svg";
+
+import phoneDark from "../../assets/svg/dark/phone.svg";
+import emailDark from "../../assets/svg/dark/email.svg";
+import instagramDark from "../../assets/svg/dark/instagram.svg";
+import facebookDark from "../../assets/svg/dark/facebook.svg";
+import twitterDark from "../../assets/svg/dark/twitter.svg";
+import linkedinDark from "../../assets/svg/dark/linkedin.svg";
+
+import phoneLight from "../../assets/svg/light/phone.svg";
+import emailLight from "../../assets/svg/light/email.svg";
+import instagramLight from "../../assets/svg/light/instagram.svg";
+import facebookLight from "../../assets/svg/light/facebook.svg";
+import twitterLight from "../../assets/svg/light/twitter.svg";
+import linkedinLight from "../../assets/svg/light/linkedin.svg";
 
 export default class Footer extends React.Component {
   scrollToSection = () => {
@@ -48,18 +58,19 @@ export default class Footer extends React.Component {
   };
 
   notify = () => {
-    NotificationManager.success("Successfully Copied!", "", 2000);
+    NotificationManager.success("Copied to clipboard", "", 2000);
   };
 
   render = () => {
     const goToOptions = this.props.goToOptions || [""];
-    const contactUsOptions = this.props.contactUsOptions || [""];
+    const mailingList = this.props.mailingList || [""];
+    const mobileList = this.props.mobileList || [""];
 
     this.scrollToSection();
 
     return (
       <footer
-        className="footer"
+        className={`footer ${this.props.dark && "dark"}`}
         style={{ backgroundColor: this.props.bgColor }}
       >
         <div className="footer-wrapper">
@@ -81,10 +92,27 @@ export default class Footer extends React.Component {
           <div className="widget">
             <h5 className="widget-title">Contact Us</h5>
             <ul className="widget-list">
-              {contactUsOptions.map((option) => (
+              {mailingList.map((option) => (
+                <li className="widget-li">
+                  <a href={`mailto: ${option}`} className="widget-item">
+                    <img
+                      className="widget-item-img"
+                      src={this.props.dark ? emailDark : emailLight}
+                      alt="email"
+                    />
+                    {option}
+                  </a>
+                </li>
+              ))}
+              {mobileList.map((option) => (
                 <li className="widget-li">
                   <CopyToClipboard text={option}>
                     <span className="widget-item" onClick={this.notify}>
+                      <img
+                        className="widget-item-img"
+                        src={this.props.dark ? phoneDark : phoneLight}
+                        alt="phone"
+                      />
                       {option}
                     </span>
                   </CopyToClipboard>
@@ -104,7 +132,7 @@ export default class Footer extends React.Component {
                   >
                     <img
                       className="media-icon"
-                      src={instagram}
+                      src={this.props.dark ? instagramDark : instagramLight}
                       alt="instagram"
                     />
                   </a>
@@ -117,7 +145,11 @@ export default class Footer extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="media-icon" src={facebook} alt="facebook" />
+                    <img
+                      className="media-icon"
+                      src={this.props.dark ? facebookDark : facebookLight}
+                      alt="facebook"
+                    />
                   </a>
                 </li>
               )}
@@ -128,7 +160,11 @@ export default class Footer extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="media-icon" src={twitter} alt="twitter" />
+                    <img
+                      className="media-icon"
+                      src={this.props.dark ? twitterDark : twitterLight}
+                      alt="twitter"
+                    />
                   </a>
                 </li>
               )}
@@ -139,7 +175,11 @@ export default class Footer extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="media-icon" src={linkedin} alt="linkedin" />
+                    <img
+                      className="media-icon"
+                      src={this.props.dark ? linkedinDark : linkedinLight}
+                      alt="linkedin"
+                    />
                   </a>
                 </li>
               )}
