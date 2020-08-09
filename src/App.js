@@ -99,7 +99,7 @@ function App() {
                   lettering={lettering}
                   hamburger={hamburger}
                   options={navbarOptions}
-                  optionColor={mainColor}
+                  optionHoverColor={mainColor}
                 />
                 <br />
                 <Navbar
@@ -107,7 +107,7 @@ function App() {
                   noLettering
                   hamburger={hamburger}
                   options={navbarOptions}
-                  optionColor={secondaryColor}
+                  optionHoverColor={secondaryColor}
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="1">

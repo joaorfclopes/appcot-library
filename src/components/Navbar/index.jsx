@@ -102,7 +102,7 @@ export default class Navbar extends React.Component {
                   {`                    
                     .option:hover,
                     .option:active {
-                      color: ${this.props.optionColor};
+                      color: ${this.props.optionHoverColor};
                       text-decoration: none;
                       cursor: pointer;
                       background-position: 0 100%;
