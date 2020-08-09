@@ -78,6 +78,10 @@ footer {
     width: 20px;
 }
 
+.signature-link:hover {
+    color: inherit;
+}
+
 @media only screen and (max-width: 760px) {
     .footer-wrapper>div {
         width: 100%;

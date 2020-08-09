@@ -187,7 +187,14 @@ export default class Footer extends React.Component {
           </div>
           <p className="signature">
             Powered by <img className="signature-img" src={appcot} alt="logo" />{" "}
-            Appcot
+            <a
+              className="signature-link"
+              href="https://appcot.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Appcot
+            </a>
           </p>
         </div>
         <NotificationContainer />
