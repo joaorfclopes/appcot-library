@@ -99,24 +99,14 @@ export default class Navbar extends React.Component {
             <div className="menu-options">
               {options.map((option) => (
                 <Style key={option}>
-                  {`
-                    .option {
-                      position: relative;
-                      overflow: hidden;
-                      background: linear-gradient(to right, ${this.props.optionColor}, ${this.props.optionColor} 50%, black 50%);
-                      background-clip: text;
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                      background-size: 200% 100%;
-                      background-position: 100%;
-                      transition: background-position 300ms ease;
-                      line-height: normal;
-                    }
-                    
+                  {`                    
                     .option:hover,
                     .option:active {
+                      color: ${this.props.optionColor};
+                      text-decoration: none;
                       cursor: pointer;
                       background-position: 0 100%;
+                      transition: 0.4s;
                     }
                   `}
                   <a
