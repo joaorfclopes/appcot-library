@@ -148,9 +148,9 @@ function App() {
                   content={
                     <CenteredContent
                       content={[
-                        <Subtitle dark text={words} />,
-                        <Subtitle dark text={phrase} />,
-                        <Button text="Warning" variant="warning" />,
+                        <Subtitle key="1" dark text={words} />,
+                        <Subtitle key="2" dark text={phrase} />,
+                        <Button key="3" text="Warning" variant="warning" />,
                       ]}
                     />
                   }
@@ -160,13 +160,18 @@ function App() {
                 <BackgroundImg
                   bgImage={background}
                   content={[
-                    <Title dark text={words} overlineColor={mainColor} />,
-                    <Subtitle dark text={words} />,
-                    <Text dark text={paragraph} />,
-                    <Subtitle text={words} />,
-                    <Text text={paragraph} />,
-                    <Subtitle dark text={words} />,
-                    <Text dark text={paragraph} />,
+                    <Title
+                      key="1"
+                      dark
+                      text={words}
+                      overlineColor={mainColor}
+                    />,
+                    <Subtitle key="2" dark text={words} />,
+                    <Text key="3" dark text={paragraph} />,
+                    <Subtitle key="4" text={words} />,
+                    <Text key="5" text={paragraph} />,
+                    <Subtitle key="6" dark text={words} />,
+                    <Text key="7" dark text={paragraph} />,
                   ]}
                 />
                 <br />
@@ -174,22 +179,27 @@ function App() {
                   bgImage={background}
                   fixedBackground
                   content={[
-                    <Title text={words} overlineColor={mainColor} />,
-                    <Subtitle dark text={words} />,
-                    <Text dark text={paragraph} />,
-                    <Subtitle text={words} />,
-                    <Text text={paragraph} />,
-                    <Subtitle dark text={words} />,
-                    <Text dark text={paragraph} />,
+                    <Title
+                      key="1"
+                      dark
+                      text={words}
+                      overlineColor={mainColor}
+                    />,
+                    <Subtitle key="2" dark text={words} />,
+                    <Text key="3" dark text={paragraph} />,
+                    <Subtitle key="4" text={words} />,
+                    <Text key="5" text={paragraph} />,
+                    <Subtitle key="6" dark text={words} />,
+                    <Text key="7" dark text={paragraph} />,
                   ]}
                 />
               </Tab.Pane>
               <Tab.Pane eventKey="8">
                 <SideBySide
                   text={[
-                    <Subtitle text={words} />,
-                    <Text text={paragraph} />,
-                    <Text text={paragraph} />,
+                    <Subtitle key="1" text={words} />,
+                    <Text key="2" text={paragraph} />,
+                    <Text key="3" text={paragraph} />,
                   ]}
                   img={img1}
                 />
@@ -197,9 +207,9 @@ function App() {
                 <SideBySide
                   inverted
                   text={[
-                    <Subtitle text={words} />,
-                    <Text text={paragraph} />,
-                    <Text text={paragraph} />,
+                    <Subtitle key="1" text={words} />,
+                    <Text key="2" text={paragraph} />,
+                    <Text key="3" text={paragraph} />,
                   ]}
                   img={img1}
                 />
@@ -219,9 +229,9 @@ function App() {
               <Tab.Pane eventKey="10">
                 <CenteredContent
                   content={[
-                    <Subtitle text={words} />,
-                    <Subtitle text={phrase} />,
-                    <Button text="Warning" variant="warning" />,
+                    <Subtitle key="1" text={words} />,
+                    <Subtitle key="2" text={phrase} />,
+                    <Button key="3" text="Warning" variant="warning" />,
                   ]}
                 />
               </Tab.Pane>

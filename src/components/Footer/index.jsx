@@ -78,7 +78,7 @@ export default class Footer extends React.Component {
             <h5 className="widget-title">Go To</h5>
             <ul className="widget-list">
               {goToOptions.map((option) => (
-                <li className="widget-li">
+                <li key={option} className="widget-li">
                   <a
                     href={"#" + this.formatString(option)}
                     className="widget-item"
@@ -93,27 +93,35 @@ export default class Footer extends React.Component {
             <h5 className="widget-title">Contact Us</h5>
             <ul className="widget-list">
               {mailingList.map((option) => (
-                <li className="widget-li">
+                <li key={option} className="widget-li">
                   <a href={`mailto: ${option}`} className="widget-item">
-                    <img
-                      className="widget-item-img"
-                      src={this.props.dark ? emailDark : emailLight}
-                      alt="email"
-                    />{" "}
-                    {option}
+                    {this.props.mailingList && (
+                      <React.Fragment>
+                        <img
+                          className="widget-item-img"
+                          src={this.props.dark ? emailDark : emailLight}
+                          alt="email"
+                        />{" "}
+                        {option}
+                      </React.Fragment>
+                    )}
                   </a>
                 </li>
               ))}
               {mobileList.map((option) => (
-                <li className="widget-li">
+                <li key={option} className="widget-li">
                   <CopyToClipboard text={option}>
                     <span className="widget-item" onClick={this.notify}>
-                      <img
-                        className="widget-item-img"
-                        src={this.props.dark ? phoneDark : phoneLight}
-                        alt="phone"
-                      />{" "}
-                      {option}
+                      {this.props.mobileList && (
+                        <React.Fragment>
+                          <img
+                            className="widget-item-img"
+                            src={this.props.dark ? phoneDark : phoneLight}
+                            alt="phone"
+                          />{" "}
+                          {option}
+                        </React.Fragment>
+                      )}
                     </span>
                   </CopyToClipboard>
                 </li>
